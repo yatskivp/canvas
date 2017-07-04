@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Cropper</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class='work-space'>
+		<div class='container  clear'>
+			<div class='image-source'>
+				<div class='text'>Image source</div>
+				<p><input type='radio' name="choose" id='local' checked><label for='local'>Local</label></p>
+				<p><input type='radio' name="choose" id='remote'><label for='remote'>Remote</label></p>
+				<p><input type='text' id='path' disabled></p>
+				<p><input type='button' id='btn-browse'><label id='lable-btn' for="btn-browse">Browse</label></p>
+				<p><input type='button' id='btn-remote'><label id='lable-btn-remote' for="btn-remote">Past</label></p>
+			</div>
+			<div id='canvas-header' class='clear'>
+				<div id='canvas-title'>Target Image</div>
+				<div id='canvas-status'><div></div></div>
+			</div>
+			<div id='div-canvas'>
+				<canvas id="main-canvas" width = '500px' height = '500px'>
+					Your browser does not support the HTML5 canvas tag.
+				</canvas>
+			</div>
+			<div id='mask-overlay'>
+			<div id='div-popup-canvas'>
+				<div id='modal-title'>Confirm cropped image</div>
+				<canvas id="popup-canvas">
+					Your browser does not support the HTML5 canvas tag.
+				</canvas>
+				<div class='modal-btn clear'>
+					<div id='btn-cancel'>
+						<button>Cancel</button>
+					</div>
+					<div id='btn-save'><a id="downloadLnk" download="CanvasImg.jpg">
+						<button>Save As</button></a>
+					</div>
+					<div id='btn-replace'>
+						<button>Replace</button>
+					</div>
+				</div>
+				<div id='modal-footer'></div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<script type="text/javascript" src='main.js'></script>
+</body>
+</html>
