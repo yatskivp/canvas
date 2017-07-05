@@ -127,6 +127,7 @@ function draw(sx,sy,sw,sh,dx,dy) {
     //то координати для початку вирізання в канвасі стануть не ті, що ми зажали, а ті, де відпустили клік 
   popupCanvas.width = sw;//задаємо розміри кавасу, що дорівнюватимуть розмірам вирізаної картинки
   popupCanvas.height = sh;
+  document.getElementById('div-popup-canvas').style.left =  'calc(50% - '+sw/2+'px)';//відцентрувати
   console.log(sx, sy, sw, sh, 0, 0, sw, sh);
   ctxPop.drawImage(canvas,sx, sy, sw, sh, 0, 0, sw, sh);//вставить вирізану картинку в попап канвас 
 }
